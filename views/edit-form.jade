@@ -1,0 +1,9 @@
+<h1>Editing #{user.name}'s profile!</h1>
+form(method="POST", action="/user/#{user._id}")
+ input(type="hidden", name="_method", value="PUT")
+ p Name:
+  input(type="text", name="name", value="#{user.name}")
+ p Age:
+  input(type="number", name="age", value="#{user.age}")
+ p
+  input(type="submit")
